@@ -5,10 +5,12 @@ public class SingleLinkedList {
     private int size;
 
     public ListNode getHead() {
+
         return head;
     }
 
     public SingleLinkedList() {
+
         head = new ListNode();  // dummy node
     }
 
@@ -64,11 +66,22 @@ public class SingleLinkedList {
     }
 
     public int getSize() {
+
         return size;
     }
 
     // reverse the linked list RECURSIVELY
-    public void reverse() {
+    public ListNode reverse() {
         // homework
+        if(this.head == null){
+            return this.head;
+        }
+        if(head.next != null) {
+            ListNode temp = new ListNode();
+            temp = this.head;
+            this.head = head.next;
+            head.next = temp;
+        }
+        return reverse();
     }
 }
