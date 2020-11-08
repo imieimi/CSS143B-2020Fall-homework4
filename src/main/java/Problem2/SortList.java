@@ -42,7 +42,20 @@ public class SortList {
 
     public static ListNode mergeLists(ListNode list1, ListNode list2) {
         // homework
-        return null;
+        if(list1 != null) {
+            return list1.next;
+        }
+        if(list1 == null){
+            return list2;
+        }
+        if(list2 != null){
+            return list2.next;
+        }
+        if(list2 == null){
+            return list1;
+        }
+        return mergeLists(list1, list2);
+        //return null;
 
     }
 }

@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
 
 public class Problem1Test {
 
- /*   public class PermutationTestCase {
+    public class PermutationTestCase {
         int[] input;
         List<List<Integer>> expect;
 
@@ -131,7 +131,7 @@ public class Problem1Test {
 
         Permutation.permute(input);
     }
-*/
+
     @Test
     public void testBinarySearch() {
         int[][] inputs = {
